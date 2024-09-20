@@ -1,0 +1,45 @@
+<!--<ul>-->
+<!--    &lt;!&ndash; Iterate over object_list &ndash;&gt;-->
+<!--    {% for object in object_list %}-->
+<!--    &lt;!&ndash; Display Objects &ndash;&gt;-->
+<!--    <li>{{ object.title }}</li>-->
+<!--    <li>{{ object.description }}</li>-->
+<!--        <hr/>-->
+<!--    &lt;!&ndash; If object_list is empty  &ndash;&gt;-->
+<!--    {% empty %}-->
+<!--    <li>No objects yet.</li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>CBV Generic List View</h1>
+
+
+    </div>
+    <hr>
+<style>
+table, th, td {
+  border:1px solid black;
+  border-radius: 10px;
+}
+</style>
+    <table class="table" style="width:100%">
+        <tr>
+
+            <th>Title</th>
+            <th>Description</th>
+
+        </tr>
+
+        {% for i in data %}
+        <tr>
+
+            <td>{{ i.title }}</td>
+            <td>{{ i.description }}</td>
+
+        </tr>
+        {% endfor %}
+
+    </table>
+{% endblock content %}

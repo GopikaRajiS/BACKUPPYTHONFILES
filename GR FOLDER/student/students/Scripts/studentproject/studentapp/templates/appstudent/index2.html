@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FORM CREATION</title>
+</head>
+<body>
+<form method="POST" class="post-form">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <button type="submit" class="save btn btn-default">save</button>
+</form>
+
+</body>
+</html>

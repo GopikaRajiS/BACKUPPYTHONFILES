@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Output</title>
+    <style>
+        table,th,td{
+            border:1px solid black;
+            border-collapse:collapse;
+            padding:10px;
+        }
+
+        th,td{
+            padding:10px;
+        }
+
+       th{
+            text-align:right;
+       }
+
+        .center{
+            position : absolute;
+            top : 50%;
+            left: 50%;
+            transform : translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+    <table class="center">
+        <tr>
+            <th colspan="2">
+                <center><h3>View Details</h3></center>
+            </th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{Name}}</td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td>{{Password}}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{Address}}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{Email}}</td>
+        </tr>
+    </table>
+    {% endblock %}
+    <h4 >THANKS FOR REGISTERING YOUR DETAILS ARE REGISTERED</h4>
+</body>
+</html>

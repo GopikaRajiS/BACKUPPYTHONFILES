@@ -1,0 +1,22 @@
+{%block content%}
+<div class="jimbotron">
+    <h1>CBV Generic List View</h1>
+</div>
+<hr>
+<style>
+    table,th,td{
+        border:1px solid black;border-radius:10px;
+    }
+</style>
+<table class="table" style="width:100%">
+<tr>
+    <th>Title</th> <th>Description</th>
+</tr>
+{% for i in data %}
+<tr>
+    <td>{{i.title}}</td>
+    <td>{{i.description}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock content %}
